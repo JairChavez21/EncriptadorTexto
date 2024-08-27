@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Contenedor de texto original y botones -->
+        <div class="text-area-container">
+            <img src="Logo.png" alt="Logo-Alura" class="logo">
+            <h1 class="titulo">Encripta o desencripta mensajes</h1>
+            <textarea id="textoOriginal" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="buttons">
+                <button class="primary-button" onclick="encriptar()">Encriptar</button>
+                <button class="secondary-button" onclick="desencriptar()">Desencriptar</button>
+            </div>
+            <p class="note">⚠️ Solo letras minúsculas y sin acentos</p>
+        </div>
+
+        <!-- Contenedor de texto procesado -->
+        <div class="output-container">
+            <textarea id="resultado" readonly placeholder="Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar."></textarea>
+            <button class="primary-button" onclick="copiar()">Copiar</button>
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://www.instagram.com/yeis.yo/" target="_blank">by: Jair Cedillo Chávez</a>
+    </footer>
+    
+    <script src="app.js" defer></script>
+
+</body>
+</html>
+
