@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .titulo {
@@ -21,7 +21,7 @@ body {
     display: flex;
     background-color: #ffffff;
     border-radius: 20px;
-    width: 80%;
+    width: 90%;
     height: 70vh;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -29,7 +29,7 @@ body {
 
 .text-area-container {
     flex: 1;
-    padding: 40px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -44,8 +44,8 @@ body {
     height: 50%;
     border: none;
     border-radius: 10px;
-    padding: 15px;
-    font-size: 16px;
+    padding: 12px;
+    font-size: 14px;
     color: #333;
     background-color: #e9eff6;
     resize: none;
@@ -67,8 +67,8 @@ body {
 }
 
 .primary-button, .secondary-button {
-    padding: 12px 25px;
-    font-size: 16px;
+    padding: 10px 20px;
+    font-size: 14px;
     border-radius: 8px;
     border: none;
     cursor: pointer;
@@ -95,7 +95,7 @@ body {
 }
 
 .note {
-    font-size: 14px;
+    font-size: 12px;
     color: #666;
     margin-top: 10px;
     display: flex;
@@ -104,7 +104,7 @@ body {
 
 .output-container {
     flex: 1;
-    padding: 40px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,16 +117,16 @@ body {
 
 .output-container textarea {
     width: 100%;
-    height: 50%;
+    height: 100px;
     border: none;
     border-radius: 10px;
-    padding: 15px;
-    font-size: 16px;
+    padding: 12px;
+    font-size: 14px;
     color: #333;
     background-color: #ffffff;
     resize: none;
     box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.05);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     transition: all 0.3s ease;
 }
 
@@ -136,9 +136,9 @@ body {
 }
 
 .output-container button {
-    width: 50%;
-    padding: 12px 25px;
-    font-size: 16px;
+    width: 80%;
+    padding: 10px;
+    font-size: 14px;
     border-radius: 8px;
     border: none;
     cursor: pointer;
@@ -160,7 +160,7 @@ footer {
 footer a {
     text-decoration: none;
     color: #F6F6F6;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
 }
 
@@ -170,11 +170,90 @@ footer a:hover {
 
 /* Imagen superior izquierda */
 .logo {
-    width: 100px;
-    height: 50px;
-    position: absolute;
+    max-width: 100px;
+    max-height: 50px;
+    display: block;
     top: 25px;
     left: 25px;
+    margin: 0;
+    margin-bottom: 10px;
 }
 
+/* Estilos específicos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    /* ... */
+    .container {
+        flex-direction: column;
+        width: 95%;
+        height: auto;
+        box-shadow: none;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
 
+    .text-area-container {
+        flex: 1;
+        padding: 20px; /* Aumentar padding para que el contenedor de texto superior sea más grande verticalmente */
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20 px;
+    }
+
+    .text-area-container textarea {
+        height: 30vh; /* Ajustar altura del textarea para que sea más grande */
+        border: none;
+        
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+        align-items: center; /* Centrar los botones */
+    }
+
+    .primary-button, .secondary-button, .output-container button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        text-align: center; /* Centrar el texto de los botones */
+    }
+
+    .titulo {
+        font-size: 18px;
+        margin-bottom: 10px;
+        text-align: center; /* Centrar el título */
+    }
+
+    .output-container {
+        flex: 1;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center; /* Centrar el contenido del contenedor inferior */
+    }
+
+    .output-container textarea {
+        height: 30vh; /* Ajustar altura del textarea para que sea más grande */
+    }
+
+    footer {
+        padding: 10px;
+        text-align: center; /* Centrar el footer */
+        max-width: 90%;
+        margin-top: 0;
+        clear: both;
+    }
+
+    .logo {
+        max-height: 50px;
+        max-width: 100px;
+        margin-bottom: 20px;
+        display: block;
+        margin: 0 auto;
+     } /* Agregar espacio entre el logo y el footer */
+}
