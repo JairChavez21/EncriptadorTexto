@@ -1,2 +1,2 @@
 # EncriptadorTexto
-Una página con el propósito 
+Una página con el propósito de encriptar texto y desencriptarlo...
